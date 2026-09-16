@@ -1,4 +1,4 @@
-main {
+```css main {
     width: 75vw;
     margin: 1rem auto;
     background-color: #eee;
@@ -20,7 +20,7 @@ p {
 footer {
     border-top: 1px solid #555;
     padding-top: 5px;
-    /* Remova o comentário abaixo e observe os resultados. */
-
-    /* clear: both; */
+    clear: both;
 }
+
+```
