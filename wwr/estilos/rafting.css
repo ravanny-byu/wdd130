@@ -1,6 +1,6 @@
-/* ================================
-   VARIÁVEIS DO SITE
-================================ */
+/* ========================================
+   VARIÁVEIS
+======================================== */
 
 :root {
     --cor-primaria: #1b4965;
@@ -14,9 +14,9 @@
     --fonte-body: Arial, Helvetica, sans-serif;
 }
 
-/* ================================
+/* ========================================
    RESET
-================================ */
+======================================== */
 
 * {
     margin: 0;
@@ -24,9 +24,9 @@
     box-sizing: border-box;
 }
 
-/* ================================
+/* ========================================
    BODY
-================================ */
+======================================== */
 
 body {
     font-family: var(--fonte-body);
@@ -35,9 +35,9 @@ body {
     line-height: 1.6;
 }
 
-/* ================================
-   LARGURA PRINCIPAL
-================================ */
+/* ========================================
+   LARGURA DA PÁGINA
+======================================== */
 
 header,
 main,
@@ -46,9 +46,9 @@ footer {
     margin: 0 auto;
 }
 
-/* ================================
+/* ========================================
    HEADER
-================================ */
+======================================== */
 
 header {
     display: grid;
@@ -56,6 +56,8 @@ header {
     align-items: center;
 
     background-color: var(--cor-primaria);
+    color: var(--cor-destaque2);
+
     padding: 20px;
 }
 
@@ -64,11 +66,14 @@ header > img {
     height: auto;
 }
 
-/* ================================
+/* ========================================
    NAVEGAÇÃO
-================================ */
+======================================== */
 
 nav {
+    margin: 16px;
+    padding: 8px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,11 +81,15 @@ nav {
 }
 
 nav a {
-    color: var(--cor-branco);
-    text-decoration: none;
+    color: var(--cor-destaque2);
     background-color: var(--cor-destaque1);
+
+    text-decoration: none;
+
     padding: 10px 15px;
+
     border-radius: 5px;
+
     font-weight: bold;
 }
 
@@ -89,9 +98,9 @@ nav a:hover {
     color: var(--cor-destaque1);
 }
 
-/* ================================
+/* ========================================
    TÍTULOS
-================================ */
+======================================== */
 
 h1,
 h2 {
@@ -108,9 +117,9 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* ================================
+/* ========================================
    HERO
-================================ */
+======================================== */
 
 .hero {
     position: relative;
@@ -123,13 +132,15 @@ h2 {
     height: auto;
 }
 
-/* ================================
-   TÍTULO SOBRE A IMAGEM
-================================ */
+/* ========================================
+   TÍTULO DO HERO
+======================================== */
 
 .hero h1 {
     position: absolute;
+
     top: 20px;
+
     width: 100%;
 
     padding: 16px;
@@ -140,13 +151,11 @@ h2 {
 
     background-color: var(--cor-destaque1);
     color: var(--cor-branco);
-
-    font-size: 2.2rem;
 }
 
-/* ================================
-   ARTICLE SOBRE A IMAGEM
-================================ */
+/* ========================================
+   ARTICLE DO HERO
+======================================== */
 
 .hero article {
     position: absolute;
@@ -157,8 +166,8 @@ h2 {
 
     padding: 20px;
 
-    background-color: rgba(11, 37, 69, 0.88);
-    color: var(--cor-branco);
+    background-color: var(--cor-destaque1);
+    color: var(--cor-destaque2);
 
     border-radius: 8px;
 }
@@ -172,14 +181,14 @@ h2 {
     margin: 0 0 10px 20px;
 
     border: 3px solid var(--cor-branco);
+
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* ================================
-   ARTICLE / PARÁGRAFOS / SEÇÕES
-================================ */
+/* ========================================
+   PARÁGRAFOS, SEÇÕES E ARTICLE
+======================================== */
 
-nav,
 p,
 section,
 article {
@@ -189,24 +198,27 @@ article {
 
 section {
     background-color: var(--cor-branco);
+
     padding: 25px;
+
     margin-top: 25px;
     margin-bottom: 25px;
 
     border-radius: 8px;
 }
 
-/* ================================
+/* ========================================
    FOOTER
-================================ */
+======================================== */
 
 footer {
     display: flex;
+
     justify-content: space-between;
     align-items: center;
 
     background-color: var(--cor-primaria);
-    color: var(--cor-branco);
+    color: var(--cor-destaque2);
 
     padding: 20px;
 }
@@ -215,10 +227,19 @@ footer p {
     margin: 0;
 }
 
+/* ========================================
+   REDES SOCIAIS
+======================================== */
+
 .redes-sociais {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
+
+    margin: 16px;
+    padding: 8px;
 }
 
 .redes-sociais a {
@@ -228,5 +249,6 @@ footer p {
 .redes-sociais img {
     width: 40px;
     height: 40px;
+
     object-fit: contain;
 }
