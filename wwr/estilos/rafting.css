@@ -67,7 +67,7 @@ header > img {
 }
 
 /* ========================================
-   NAVEGAÇÃO - FLEXBOX
+   NAVEGAÇÃO
 ======================================== */
 
 nav {
@@ -301,7 +301,7 @@ footer p {
    REDES SOCIAIS
 ======================================== */
 
-.redes-sociais {
+.socialmedia {
     display: flex;
 
     justify-content: flex-end;
@@ -313,7 +313,7 @@ footer p {
     padding: 0;
 }
 
-.redes-sociais a {
+.socialmedia a {
     text-decoration: none;
 
     background-color: transparent;
@@ -321,32 +321,9 @@ footer p {
     padding: 0;
 }
 
-.redes-sociais img {
+.socialmedia img {
     width: 40px;
     height: 40px;
 
     object-fit: contain;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--cor-primaria);
-    color: white;
-}
-
-.socialmedia {
-    display: flex;
-    gap: 15px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 35px;
-    height: 35px;
 }
