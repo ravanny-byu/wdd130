@@ -9,9 +9,6 @@
     --cor-destaque2: #cae9ff;
     --cor-fundo: #f4f9fc;
     --cor-branco: #ffffff;
-
-    --fonte-titulo: Georgia, "Times New Roman", serif;
-    --fonte-body: Arial, Helvetica, sans-serif;
 }
 
 /* ========================================
@@ -19,46 +16,52 @@
 ======================================== */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 /* ========================================
-   BODY
+   CONFIGURAÇÕES GERAIS
 ======================================== */
 
 body {
-    font-family: var(--fonte-body);
-    color: var(--cor-destaque1);
+    margin: 0;
+    padding: 0;
     background-color: var(--cor-fundo);
+    color: var(--cor-destaque1);
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
-/* ========================================
-   LARGURA DA PÁGINA
-======================================== */
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+}
 
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
+h1 {
+    color: var(--cor-destaque1);
+    text-align: center;
+    margin: 0 0 30px;
+}
+
+h2 {
+    color: var(--cor-primaria);
 }
 
 /* ========================================
-   HEADER - CSS GRID
+   CABEÇALHO
 ======================================== */
 
 header {
+    width: 840px;
+    margin: 0 auto;
+    padding: 15px 20px;
+
+    background-color: var(--cor-primaria);
+
     display: grid;
     grid-template-columns: 180px 1fr;
     align-items: center;
-
-    background-color: var(--cor-primaria);
-    color: var(--cor-destaque2);
-
-    padding: 20px;
 }
 
 header > img {
@@ -66,469 +69,276 @@ header > img {
     height: auto;
 }
 
-/* ========================================
-   NAVEGAÇÃO
-======================================== */
-
-nav {
-    margin: 16px;
-    padding: 8px;
-
+header nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-end;
     align-items: center;
-
     gap: 10px;
 }
 
-nav a {
-    color: var(--cor-destaque2);
-    background-color: var(--cor-destaque1);
+header nav a {
+    padding: 12px 15px;
 
+    color: var(--cor-branco);
     text-decoration: none;
-
-    padding: 10px 15px;
-
-    border-radius: 5px;
-
     font-weight: bold;
 }
 
-nav a:hover {
+header nav a:hover {
     background-color: var(--cor-secundaria);
     color: var(--cor-destaque1);
 }
 
 /* ========================================
-   TÍTULOS
+   CONTEÚDO PRINCIPAL
 ======================================== */
 
-h1,
-h2 {
-    font-family: var(--fonte-titulo);
-    color: var(--cor-primaria);
-    text-align: center;
-}
+main {
+    width: 840px;
+    min-height: 700px;
+    margin: 0 auto;
+    padding: 40px;
 
-h1 {
-    color: var(--cor-branco);
-}
-
-h2 {
-    margin-bottom: 15px;
-}
-
-/* ========================================
-   HERO
-======================================== */
-
-.hero {
-    position: relative;
-    margin-top: 20px;
-}
-
-.hero > img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-/* ========================================
-   TÍTULO DO HERO
-======================================== */
-
-.hero h1 {
-    position: absolute;
-
-    top: 20px;
-
-    width: 100%;
-
-    padding: 16px;
-
-    text-align: center;
-
-    opacity: 0.85;
-
-    background-color: var(--cor-destaque1);
-    color: var(--cor-branco);
-}
-
-/* ========================================
-   ARTICLE DO HERO
-======================================== */
-
-.hero article {
-    position: absolute;
-
-    bottom: 30px;
-    left: 50px;
-    right: 50px;
-
-    padding: 20px;
-
-    background-color: var(--cor-destaque1);
-    color: var(--cor-destaque2);
-
-    border-radius: 8px;
-}
-
-.hero article img {
-    float: right;
-
-    width: 125px;
-    height: auto;
-
-    margin: 0 0 10px 20px;
-
-    border: 3px solid var(--cor-branco);
-
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-}
-
-/* ========================================
-   PARÁGRAFOS E SEÇÕES
-======================================== */
-
-p {
-    margin: 16px;
-    padding: 8px;
-}
-
-section {
     background-color: var(--cor-branco);
-
-    padding: 25px;
-
-    margin-top: 25px;
-    margin-bottom: 25px;
-
-    border-radius: 8px;
 }
 
-/* ========================================
-   HISTÓRIA
-======================================== */
-
-.historia {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-
-    align-items: center;
+main section {
+    margin-bottom: 40px;
 }
 
-.historia h2 {
-    grid-column: 1 / 3;
-}
-
-.historia img {
-    grid-column: 1 / 2;
-    width: 100%;
-    height: auto;
-}
-
-.historia p {
-    grid-column: 2 / 3;
-    margin: 0;
-}
-
-/* ========================================
-   AVENTURAS
-======================================== */
-
-.aventuras h2 {
-    margin-bottom: 25px;
-}
-
-/* ========================================
-   GALERIA DAS AVENTURAS
-======================================== */
-
-.galeria {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: flex-start;
-
-    gap: 10px;
-}
-
-.galeria figure {
-    flex: 1;
-    text-align: center;
-}
-
-.galeria img {
-    display: block;
-
-    width: 100%;
-    height: 120px;
-
-    object-fit: cover;
-
-    border-radius: 5px;
-}
-
-.galeria figcaption {
-    margin-top: 8px;
-
+main a {
+    color: var(--cor-primaria);
     font-weight: bold;
+}
+
+main a:hover {
     color: var(--cor-destaque1);
 }
 
 /* ========================================
-   PÁGINA FALE CONOSCO
+   INFORMAÇÕES DE CONTATO
 ======================================== */
 
-.contato {
+.contato-intro {
     padding: 25px;
-}
-
-.contato > h1 {
-    background-color: var(--cor-primaria);
-    color: var(--cor-branco);
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-.contato > p {
-    text-align: center;
-    margin: 0 0 20px;
-}
-
-/* ========================================
-   INFORMAÇÕES DA EMPRESA
-======================================== */
-
-.informacoes-contato {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-    align-items: start;
-}
-
-.dados-empresa,
-.mapa {
-    background-color: var(--cor-destaque2);
-    padding: 20px;
     border-radius: 8px;
+    background-color: var(--cor-fundo);
 }
 
-.dados-empresa h2,
-.mapa h2 {
-    color: var(--cor-primaria);
-}
-
-.dados-empresa p {
+.contato-intro p {
     margin: 10px 0;
-    padding: 5px;
-}
-
-.mapa iframe {
-    display: block;
-    width: 100%;
-    height: 300px;
-    border: none;
 }
 
 /* ========================================
    EQUIPE
 ======================================== */
 
-.equipe {
-    text-align: center;
-}
-
-.funcionarios {
+.equipe-container {
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: stretch;
     gap: 20px;
 }
 
-.funcionarios figure {
+.equipe figure {
     flex: 1;
-    margin: 0;
-}
-
-.funcionarios img {
-    display: block;
     width: 100%;
-    max-width: 180px;
-    height: 180px;
-    object-fit: cover;
-    margin: 0 auto;
-    border-radius: 8px;
-    border: 3px solid var(--cor-primaria);
+    max-width: 240px;
+    margin: 0;
+
+    text-align: center;
 }
 
-.funcionarios figcaption {
+.equipe figure img {
+    display: block;
+
+    width: 100%;
+    height: 180px;
+
+    /*
+       Mantém todas as fotos com o mesmo
+       formato visual, mesmo que os arquivos
+       tenham dimensões diferentes.
+    */
+    object-fit: cover;
+    object-position: center;
+
+    border: 3px solid var(--cor-primaria);
+    border-radius: 8px;
+}
+
+.equipe figcaption {
     margin-top: 10px;
+
     color: var(--cor-destaque1);
     font-weight: bold;
 }
 
 /* ========================================
-   FORMULÁRIO DE CONTATO
+   FORMULÁRIO
 ======================================== */
 
 .formulario-contato {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 40px;
 }
 
-.formulario-contato h2 {
-    margin-bottom: 20px;
-}
-
-.formulario-contato form {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.formulario-contato > form > label {
-    margin-top: 10px;
-    font-weight: bold;
-    color: var(--cor-destaque1);
-}
-
-/* ========================================
-   CAMPOS DO FORMULÁRIO
-======================================== */
-
-.formulario-contato input[type="text"],
-.formulario-contato input[type="email"],
-.formulario-contato textarea {
+form {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #999;
-    border-radius: 5px;
-    background-color: var(--cor-branco);
-    font-family: var(--fonte-body);
-    font-size: 1rem;
 }
 
-.formulario-contato textarea {
-    resize: vertical;
+fieldset {
+    padding: 25px;
+
+    border: 2px solid var(--cor-primaria);
+    border-radius: 8px;
+
+    background-color: var(--cor-destaque2);
 }
 
-/* ========================================
-   OPÇÕES DE FINALIDADE
-======================================== */
+legend {
+    padding: 5px 12px;
 
-.formulario-contato fieldset {
-    margin-top: 15px;
-    padding: 15px;
-    border: 1px solid #999;
-    border-radius: 5px;
-}
-
-.formulario-contato legend {
-    padding: 0 5px;
-    font-weight: bold;
-}
-
-.formulario-contato fieldset label {
-    display: block;
-    margin: 8px 0;
-    font-weight: normal;
-}
-
-.formulario-contato input[type="radio"] {
-    width: auto;
-    margin-right: 8px;
-}
-
-/* ========================================
-   NEWSLETTER
-======================================== */
-
-.formulario-contato .newsletter {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 15px;
-    font-weight: normal;
-}
-
-.formulario-contato input[type="checkbox"] {
-    width: auto;
-}
-
-/* ========================================
-   BOTÃO ENVIAR
-======================================== */
-
-.formulario-contato button {
-    align-self: center;
-    margin-top: 20px;
-    padding: 12px 30px;
+    border-radius: 4px;
 
     background-color: var(--cor-primaria);
     color: var(--cor-branco);
 
+    font-weight: bold;
+}
+
+label {
+    display: block;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+
+    font-weight: bold;
+}
+
+/* ========================================
+   CAMPO DE TEXTO
+======================================== */
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 2px solid var(--cor-primaria);
+    border-radius: 5px;
+
+    background-color: var(--cor-branco);
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ========================================
+   RADIO BUTTONS
+======================================== */
+
+input[type="radio"] {
+    margin-right: 6px;
+}
+
+input[type="radio"] + label {
+    display: inline;
+
+    margin-right: 20px;
+
+    font-weight: normal;
+}
+
+/* ========================================
+   CHECKBOX
+======================================== */
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    margin-top: 20px;
+}
+
+.checkbox input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+.checkbox label {
+    display: inline;
+
+    margin: 0;
+
+    font-weight: normal;
+}
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+button[type="submit"] {
+    display: block;
+
+    margin-top: 25px;
+    padding: 14px 24px;
+
     border: none;
     border-radius: 5px;
 
-    font-family: var(--fonte-body);
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+
     font-size: 1rem;
     font-weight: bold;
 
     cursor: pointer;
 }
 
-.formulario-contato button:hover {
+button[type="submit"]:hover {
     background-color: var(--cor-destaque1);
 }
 
 /* ========================================
-   FOOTER
+   RODAPÉ
 ======================================== */
 
 footer {
-    display: flex;
+    width: 840px;
+    margin: 0 auto;
+    padding: 25px;
 
-    justify-content: space-between;
-    align-items: center;
-
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-destaque1);
     color: var(--cor-destaque2);
 
-    padding: 20px;
+    text-align: center;
 }
 
 footer p {
-    margin: 0;
+    margin: 0 0 20px;
 }
 
 /* ========================================
    REDES SOCIAIS
 ======================================== */
 
-.socialmedia {
+footer nav.redes-sociais {
     display: flex;
-
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-
-    gap: 12px;
-
-    margin: 0;
-    padding: 0;
+    gap: 20px;
 }
 
-.socialmedia a {
-    text-decoration: none;
-
-    background-color: transparent;
-
-    padding: 0;
+footer nav.redes-sociais a {
+    display: block;
 }
 
-.socialmedia img {
+footer nav.redes-sociais img {
     width: 40px;
     height: 40px;
 
@@ -539,7 +349,7 @@ footer p {
    RESPONSIVIDADE
 ======================================== */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 880px) {
 
     header,
     main,
@@ -547,37 +357,74 @@ footer p {
         width: 100%;
     }
 
-    .informacoes-contato {
+    header {
         grid-template-columns: 1fr;
+
+        justify-items: center;
+        gap: 15px;
     }
 
-    .funcionarios {
+    header nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 25px;
+    }
+
+    .equipe-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .formulario-contato {
+    .equipe figure {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .equipe figure img {
+        height: 200px;
+    }
+
+    input[type="radio"] + label {
+        margin-right: 10px;
+    }
+}
+
+/* ========================================
+   TELAS PEQUENAS
+======================================== */
+
+@media screen and (max-width: 500px) {
+
+    header {
+        padding: 15px 10px;
+    }
+
+    header nav {
+        flex-direction: column;
         width: 100%;
     }
 
-    header {
-        grid-template-columns: 1fr;
+    header nav a {
+        width: 100%;
         text-align: center;
     }
 
-    header > img {
-        margin: 0 auto;
+    main {
+        padding: 20px 15px;
     }
 
-    nav {
-        flex-wrap: wrap;
+    fieldset {
+        padding: 15px;
     }
 
-    .galeria {
-        flex-direction: column;
+    .equipe figure img {
+        height: 180px;
     }
 
-    .galeria figure {
+    button[type="submit"] {
         width: 100%;
     }
 }
