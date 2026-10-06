@@ -278,6 +278,213 @@ section {
 }
 
 /* ========================================
+   PÁGINA FALE CONOSCO
+======================================== */
+
+.contato {
+    padding: 25px;
+}
+
+.contato > h1 {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.contato > p {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+/* ========================================
+   INFORMAÇÕES DA EMPRESA
+======================================== */
+
+.informacoes-contato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.dados-empresa,
+.mapa {
+    background-color: var(--cor-destaque2);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.dados-empresa h2,
+.mapa h2 {
+    color: var(--cor-primaria);
+}
+
+.dados-empresa p {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* ========================================
+   EQUIPE
+======================================== */
+
+.equipe {
+    text-align: center;
+}
+
+.funcionarios {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.funcionarios figure {
+    flex: 1;
+    margin: 0;
+}
+
+.funcionarios img {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: 3px solid var(--cor-primaria);
+}
+
+.funcionarios figcaption {
+    margin-top: 10px;
+    color: var(--cor-destaque1);
+    font-weight: bold;
+}
+
+/* ========================================
+   FORMULÁRIO DE CONTATO
+======================================== */
+
+.formulario-contato {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.formulario-contato h2 {
+    margin-bottom: 20px;
+}
+
+.formulario-contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario-contato > form > label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--cor-destaque1);
+}
+
+/* ========================================
+   CAMPOS DO FORMULÁRIO
+======================================== */
+
+.formulario-contato input[type="text"],
+.formulario-contato input[type="email"],
+.formulario-contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+    background-color: var(--cor-branco);
+    font-family: var(--fonte-body);
+    font-size: 1rem;
+}
+
+.formulario-contato textarea {
+    resize: vertical;
+}
+
+/* ========================================
+   OPÇÕES DE FINALIDADE
+======================================== */
+
+.formulario-contato fieldset {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+.formulario-contato legend {
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.formulario-contato fieldset label {
+    display: block;
+    margin: 8px 0;
+    font-weight: normal;
+}
+
+.formulario-contato input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* ========================================
+   NEWSLETTER
+======================================== */
+
+.formulario-contato .newsletter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.formulario-contato input[type="checkbox"] {
+    width: auto;
+}
+
+/* ========================================
+   BOTÃO ENVIAR
+======================================== */
+
+.formulario-contato button {
+    align-self: center;
+    margin-top: 20px;
+    padding: 12px 30px;
+
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: var(--fonte-body);
+    font-size: 1rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.formulario-contato button:hover {
+    background-color: var(--cor-destaque1);
+}
+
+/* ========================================
    FOOTER
 ======================================== */
 
@@ -326,4 +533,51 @@ footer p {
     height: 40px;
 
     object-fit: contain;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media screen and (max-width: 700px) {
+
+    header,
+    main,
+    footer {
+        width: 100%;
+    }
+
+    .informacoes-contato {
+        grid-template-columns: 1fr;
+    }
+
+    .funcionarios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario-contato {
+        width: 100%;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    header > img {
+        margin: 0 auto;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .galeria {
+        flex-direction: column;
+    }
+
+    .galeria figure {
+        width: 100%;
+    }
 }
