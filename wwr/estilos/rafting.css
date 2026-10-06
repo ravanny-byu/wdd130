@@ -58,6 +58,7 @@ header {
     padding: 15px 20px;
 
     background-color: var(--cor-primaria);
+    color: var(--cor-branco);
 
     display: grid;
     grid-template-columns: 180px 1fr;
